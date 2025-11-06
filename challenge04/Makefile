@@ -21,6 +21,8 @@ fclean: clean
 
 re: fclean all
 
-test: $(SRCS) test_challenge04.c
-	$(CC) $(CFLAGS) -o $(TEST) $(SRCS) test_challenge04.c
+TEST_SRCS = suma.c resta.c multiplicacion.c division.c test_challenge04.c
+
+test: $(TEST_SRCS) 
+	$(CC) $(CFLAGS) -o $(TEST) $(TEST_SRCS)
 	./$(TEST)
